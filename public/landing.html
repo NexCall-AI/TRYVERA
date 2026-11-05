@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TRYVORA – The Future of Trying On Clothes</title>
+<style>
+:root{--bg:#0a0a0c;--fg:#f5f5f7;--mut:#9a9aa6;--card:#15151a;--line:#2a2a33;--acc:#8b5cf6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff;--fg:#0a0a0c;--mut:#5b5b66;--card:#f4f4f7;--line:#dcdce3}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:var(--bg);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;letter-spacing:.2em}.logo b{color:var(--acc)}
+nav a{color:var(--mut);text-decoration:none;margin-right:16px;font-size:14px}
+button,.btn{font:inherit;cursor:pointer;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--fg);padding:10px 20px;text-decoration:none;display:inline-block}
+.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+section{max-width:1000px;margin:auto;padding:64px 20px}
+.hero{text-align:center;padding-top:90px}
+.hero h1{font-size:clamp(34px,8vw,68px);line-height:1.05;margin:0 0 18px;letter-spacing:-.02em}
+.hero p{color:var(--mut);max-width:600px;margin:0 auto 28px}
+.hero .btn,.hero button{margin:5px}
+h2{font-size:clamp(26px,5vw,38px);margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{margin:6px 0}.n{color:var(--acc);font-weight:700}.mut{color:var(--mut);font-size:14px}
+.tag{display:inline-block;font-size:11px;letter-spacing:.1em;border:1px solid var(--acc);color:var(--acc);border-radius:6px;padding:2px 8px}
+.price{font-size:32px;font-weight:700}ul{padding-left:18px;margin:10px 0 0;color:var(--mut);font-size:14px}
+.pop{border-color:var(--acc)}
+.tog{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}.tog button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.demo{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.box{aspect-ratio:3/4;border:1px dashed var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:var(--mut);font-size:14px;text-align:center;padding:8px}
+.box img,.box video{width:100%;height:100%;object-fit:cover}
+#st{margin-top:14px;padding:14px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-size:14px}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font-weight:600}
+form{display:grid;gap:10px;max-width:480px}input,textarea{font:inherit;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:30px 20px;border-top:1px solid var(--line)}
+</style></head><body>
+<header><div class="logo">TRY<b>VORA</b></div><nav><a href="#demo" data-i="nDemo">Demo</a><a href="#pricing" data-i="nPrice">Pricing</a><a href="#faq">FAQ</a></nav><button id="lang">PL</button></header>
+
+<section class="hero"><span class="tag">AI VIRTUAL FITTING ROOM</span>
+<h1 data-i="h1" style="margin-top:18px">MEET THE FUTURE OF ONLINE FASHION.</h1>
+<p data-i="sub">Let your customers try on clothes virtually before they buy. Transform your online store with AI-powered virtual fitting technology.</p>
+<a class="btn pri" href="/demo" data-i="bDemo">TRY LIVE DEMO</a><a class="btn" href="#how" data-i="bSol">EXPLORE SOLUTIONS</a><a class="btn" href="#pricing" data-i="bPrice">VIEW PRICING</a></section>
+
+<section id="how"><h2 data-i="hHow">How it works</h2><div class="grid">
+<div class="card"><span class="n">01</span><h3 data-i="s1">Customer opens your store</h3><p class="mut" data-i="s1d">The customer visits your online shop.</p></div>
+<div class="card"><span class="n">02</span><h3 data-i="s2">Activates virtual fitting room</h3><p class="mut" data-i="s2d">Launches the AI fitting room, no app to install.</p></div>
+<div class="card"><span class="n">03</span><h3 data-i="s3">Tries on the product</h3><p class="mut" data-i="s3d">Picks a garment and sees a visualization on themselves.</p></div>
+<div class="card"><span class="n">04</span><h3 data-i="s4">Buys with confidence</h3><p class="mut" data-i="s4d">Makes the purchase decision.</p></div></div></section>
+
+<section id="demo"><h2>Photo try-on <span class="tag">DEMO</span></h2>
+<p class="mut" data-i="dNote">Upload your photo and a garment photo. Results come only from a real AI provider connected on the server, and none are simulated here.</p>
+<div class="demo">
+<div><div class="box" id="b1" data-i="d1">Your photo</div><input type="file" id="f1" accept="image/*" style="margin-top:8px;width:100%"></div>
+<div><div class="box" id="b2" data-i="d2">Garment photo</div><input type="file" id="f2" accept="image/*" style="margin-top:8px;width:100%"></div>
+<div><div class="box" id="b3" data-i="d3">Result appears here</div><button class="pri" id="go" style="margin-top:8px;width:100%" data-i="gen">Generate try-on</button><button id="cam" style="margin-top:8px;width:100%" data-i="cam">Live camera preview</button></div></div>
+<div id="st" data-i="stIdle">Status: provider not connected. Add the server-side key to enable real generation.</div></section>
+
+<section id="pricing"><h2 data-i="hP">Pricing</h2>
+<div class="tog"><button class="on" data-p="m" data-i="mo">Monthly</button><button data-p="y" data-i="yr">Annual (−20%)</button><button class="on" data-c="pln">PLN</button><button data-c="eur">EUR</button></div>
+<div class="grid" id="plans"></div><p class="mut" data-i="pNote">Proposed commercial offer. Prices and limits may change. EUR values are indicative.</p></section>
+
+<section><h2 data-i="hWhy">Why TRYVORA?</h2><div class="grid">
+<div class="card" data-i="w1">Better shopping experience</div><div class="card" data-i="w2">Interactive product presentation</div><div class="card" data-i="w3">More confidence choosing clothes</div><div class="card" data-i="w4">Stand out in the market</div></div></section>
+
+<section id="faq"><h2>FAQ</h2>
+<details><summary data-i="q1">Do I need a credit card for the demo?</summary><p class="mut" data-i="a1">No.</p></details>
+<details><summary data-i="q2">Does it work with Shopify?</summary><p class="mut" data-i="a2">Shopify is the first planned integration. It is not yet released or tested.</p></details>
+<details><summary data-i="q3">What happens to uploaded photos?</summary><p class="mut" data-i="a3">The production system is designed so users can delete their data. Legal documents are still to be prepared and reviewed.</p></details></section>
+
+<section id="contact"><h2 data-i="hC">Book a demo</h2>
+<form id="cf"><input required placeholder="Name"><input required type="email" placeholder="Email"><input placeholder="Store URL"><textarea rows="3" placeholder="Message"></textarea><button class="pri" data-i="send">Book a Demo</button></form>
+<p class="mut" id="cm"></p></section>
+<footer>© TRYVORA · DEMO build. Sample content, not a live service.</footer>
+
+<script>
+var T={pl:{nDemo:"Demo",nPrice:"Cennik",h1:"POZNAJ PRZYSZŁOŚĆ MODY ONLINE.",sub:"Pozwól klientom przymierzyć ubrania wirtualnie przed zakupem. Zmień swój sklep dzięki wirtualnej przymierzalni opartej na AI.",bDemo:"WYPRÓBUJ DEMO",bSol:"ROZWIĄZANIA",bPrice:"CENNIK",hHow:"Jak to działa",s1:"Klient wchodzi do sklepu",s1d:"Klient odwiedza Twój sklep internetowy.",s2:"Uruchamia przymierzalnię",s2d:"Włącza przymierzalnię AI bez instalowania aplikacji.",s3:"Przymierza produkt",s3d:"Wybiera ubranie i widzi wizualizację na sobie.",s4:"Kupuje z pewnością",s4d:"Podejmuje decyzję zakupową.",dNote:"Wgraj swoje zdjęcie i zdjęcie ubrania. Wyniki pochodzą wyłącznie z prawdziwego dostawcy AI podłączonego na serwerze, tu nic nie jest symulowane.",d1:"Twoje zdjęcie",d2:"Zdjęcie ubrania",d3:"Tu pojawi się wynik",gen:"Generuj przymiarkę",cam:"Podgląd kamery",stIdle:"Status: dostawca niepodłączony. Dodaj klucz po stronie serwera, by włączyć generowanie.",hP:"Cennik",mo:"Miesięcznie",yr:"Rocznie (−20%)",pNote:"Proponowana oferta handlowa. Ceny i limity mogą się zmienić. Wartości w EUR są orientacyjne.",hWhy:"Dlaczego TRYVORA?",w1:"Lepsze doświadczenie zakupowe",w2:"Interaktywna prezentacja produktów",w3:"Większa pewność przy wyborze ubrań",w4:"Wyróżnij sklep na rynku",q1:"Czy demo wymaga karty płatniczej?",a1:"Nie.",q2:"Czy działa z Shopify?",a2:"Shopify to pierwsza planowana integracja. Nie jest jeszcze wydana ani przetestowana.",q3:"Co dzieje się ze zdjęciami?",a3:"System produkcyjny jest projektowany tak, by użytkownik mógł usunąć dane. Dokumenty prawne są jeszcze do przygotowania i weryfikacji.",hC:"Umów demo",send:"Umów demo"}};
+var EN={};document.querySelectorAll("[data-i]").forEach(function(e){EN[e.dataset.i]=e.textContent});
+var L="en",per="m",cur="pln";
+function setL(l){L=l;document.documentElement.lang=l;document.querySelectorAll("[data-i]").forEach(function(e){var k=e.dataset.i;e.textContent=(l==="pl"&&T.pl[k])?T.pl[k]:EN[k]});document.getElementById("lang").textContent=l==="en"?"PL":"EN";plans()}
+document.getElementById("lang").onclick=function(){setL(L==="en"?"pl":"en")};
+var P=[["STARTER",149,35,"1 store · 100 sessions/mo|Basic AI fitting room|Admin panel · basic stats|Email support","1 sklep · 100 sesji/mies.|Podstawowa przymierzalnia AI|Panel admina · podstawowe statystyki|Wsparcie e-mail"],["PRO",399,95,"1 store · 500 sessions/mo|Extended AI fitting room|Widget customization · Shopify|Usage stats · priority support","1 sklep · 500 sesji/mies.|Rozszerzona przymierzalnia AI|Personalizacja widgetu · Shopify|Statystyki · priorytetowe wsparcie"],["BUSINESS",799,190,"Up to 3 stores · 1500 sessions/mo|Advanced panel · analytics|Brand personalization|Technical support","Do 3 sklepów · 1500 sesji/mies.|Zaawansowany panel · analityka|Personalizacja marki|Wsparcie techniczne"]];
+function plans(){var h="";P.forEach(function(p,i){var v=cur==="pln"?p[1]:p[2];if(per==="y")v=Math.round(v*.8);var u=cur==="pln"?" zł":" €";h+='<div class="card'+(i==1?" pop":"")+'"><h3>'+p[0]+'</h3><div class="price">'+v+u+'</div><div class="mut">/ '+(L==="pl"?"mies.":"mo")+'</div><ul>'+p[L==="pl"?4:3].split("|").map(function(x){return"<li>"+x+"</li>"}).join("")+"</ul></div>"});
+h+='<div class="card"><h3>ENTERPRISE</h3><div class="price">'+(L==="pl"?"Wycena":"Custom")+'</div><ul><li>'+(L==="pl"?"Indywidualne limity · wiele sklepów":"Custom limits · multiple stores")+'</li><li>'+(L==="pl"?"Dedykowana integracja":"Dedicated integration")+'</li></ul></div>';document.getElementById("plans").innerHTML=h}
+document.querySelectorAll(".tog button").forEach(function(b){b.onclick=function(){if(b.dataset.p){per=b.dataset.p;document.querySelectorAll("[data-p]").forEach(function(x){x.classList.toggle("on",x===b)})}else{cur=b.dataset.c;document.querySelectorAll("[data-c]").forEach(function(x){x.classList.toggle("on",x===b)})}plans()}});
+function prev(fid,bid){document.getElementById(fid).onchange=function(e){var f=e.target.files[0];if(!f)return;var im=new Image();im.src=URL.createObjectURL(f);var b=document.getElementById(bid);b.innerHTML="";b.appendChild(im)}}
+prev("f1","b1");prev("f2","b2");
+document.getElementById("go").onclick=function(){document.getElementById("st").textContent=L==="pl"?"Nie wygenerowano wyniku: brak podłączonego dostawcy AI (klucz po stronie serwera). Nic nie jest symulowane.":"No result generated: no AI provider connected (server-side key required). Nothing is simulated."};
+document.getElementById("cam").onclick=function(){var s=document.getElementById("st");if(!navigator.mediaDevices){s.textContent="Camera unavailable.";return}navigator.mediaDevices.getUserMedia({video:true}).then(function(m){var v=document.createElement("video");v.autoplay=true;v.muted=true;v.playsInline=true;v.srcObject=m;var b=document.getElementById("b3");b.innerHTML="";b.appendChild(v);s.textContent=L==="pl"?"Tylko podgląd kamery. Live AI wymaga podłączonego API.":"Camera preview only. Live AI requires a connected API."}).catch(function(){s.textContent=L==="pl"?"Brak dostępu do kamery.":"Camera access denied."})};
+document.getElementById("cf").onsubmit=function(e){e.preventDefault();document.getElementById("cm").textContent=L==="pl"?"To wersja demo: formularz nie wysyła danych. Backend do podłączenia.":"Demo build: this form does not send data yet. Backend to be connected."};
+plans();
+</script></body></html>
